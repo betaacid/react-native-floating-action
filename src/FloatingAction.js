@@ -421,12 +421,14 @@ class FloatingAction extends Component {
       borderRadius: buttonSize / 2
     };
 
+    const buttonStyle = position === 'center' ? { left: (DEVICE_WIDTH / 2) - (buttonSize / 2) } : {}
+
     return (
       <Animated.View
         style={[
           styles.buttonContainer,
           sizeStyle,
-          styles[`${position}Button`],
+          buttonStyle,
           propStyles,
           animatedVisibleView,
           this.getShadow()
@@ -685,11 +687,6 @@ const styles = StyleSheet.create({
     zIndex: 3,
     alignItems: "center",
     justifyContent: "center"
-  },
-  rightButton: {},
-  leftButton: {},
-  centerButton: {
-    left: DEVICE_WIDTH / 2 - 20
   },
   buttonTextContainer: {
     flex: 1,
