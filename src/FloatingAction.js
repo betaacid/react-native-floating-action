@@ -689,7 +689,7 @@ const styles = StyleSheet.create({
   rightButton: {},
   leftButton: {},
   centerButton: {
-    left: DEVICE_WIDTH / 2 - 28
+    left: DEVICE_WIDTH / 2 - 20
   },
   buttonTextContainer: {
     flex: 1,
